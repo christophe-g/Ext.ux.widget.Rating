@@ -1,3 +1,14 @@
+/*!
+ * Ext.ux.widget.Rating
+ *
+ * Copyright 2012, Christophe Geiser
+ * Licenced under MIT Licence
+ * See LICENSE
+ *
+ *
+ * Version : 0.8 - first commit
+ */
+ 
 .x-item-disabled  .ux-rating-star , .x-form-readonly  .ux-rating-star {
 	opacity: 0.6;
 	cursor: auto;

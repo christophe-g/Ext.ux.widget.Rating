@@ -204,7 +204,7 @@ Ext.define('Ext.ux.widget.Rating', {
 		
 		me.callParent();
 		var tpl = new Ext.XTemplate(
-			'<div class="ux-rating-container ux-rating-clearfix" tabIndex="'+ me.tabIndex +'">', 
+			'<div class="ux-rating-container ux-rating-clearfix" tabIndex="'+ me.tabIndex +'" style="height: 22px;">', 
 			rightPos ? '' : cancel, 
 				'<tpl for=".">', 
 					'<div key="{key}" class="', me.starCls, '" style="width: ', me.starWidth, 'px;">', 
