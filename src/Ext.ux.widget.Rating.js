@@ -157,6 +157,7 @@ Ext.define('Ext.ux.widget.Rating', {
 				}
 				me.selected = index;
 				me.fillTo(index, false);
+				
 			}
 		}
 	},
@@ -211,7 +212,7 @@ Ext.define('Ext.ux.widget.Rating', {
 						'<a title="{title}" style="margin-left: -{margin}px;">{key}</a>',
 					'</div>', 
 				'</tpl>', 
-			'<input type="hidden" name="', me.getName(), '" class="starHiddenClearMode" tabIndex="'+ me.tabIndex +'"></hidden>', 
+			'<input type="hidden" name="', me.getName(), '" class="input-el" tabIndex="'+ me.tabIndex +'"></hidden>', 
 			rightPos ? cancel : '', 
 			'<a class="focus-el" tabIndex="0"></a>',
 			'</div>',
@@ -221,8 +222,9 @@ Ext.define('Ext.ux.widget.Rating', {
 		});
 
 		me.stars = tpl.overwrite(me.bodyEl, me.stars, true).query('.' + me.starCls);
-		me.focusEl = Ext.get(Ext.query('a.focus-el', me.bodyEl.dom));
-		me.resetEl = Ext.get(Ext.query('div.reset-el', me.bodyEl.dom));
+		me.focusEl = Ext.get(Ext.query('a.focus-el', me.bodyEl.dom[0]));
+		me.inputEl = Ext.get(Ext.query('input.input-el', me.bodyEl.dom)[0]);
+		me.resetEl = Ext.get(Ext.query('div.reset-el', me.bodyEl.dom)[0]);
 	},
 	initEvents: function () {
 		var me = this;
