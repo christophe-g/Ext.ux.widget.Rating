@@ -1,0 +1,48 @@
+<html>
+  <head>
+  	<title>Rating Field</title>
+    <link rel="stylesheet" type="text/css" href="../../../extjs-4.1.1-rc1/resources/css/ext-all.css">
+    <script type="text/javascript" src="../../../extjs-4.1.1-rc1/ext-all-debug.js"></script>
+    <script src="../src/Ext.ux.Rating.js"></script>
+    <link rel="stylesheet" type="text/css" href="../src/Ext.ux.Rating.css"></script>
+    <script>
+Ext.onReady(function() {    
+	var rating = new Ext.ux.widget.Rating({
+				fieldLabel	:	'a rating test',
+				allowBlank	: false,
+				//disabled	: true,
+				//readOnly	: true,
+				value 		: 2.6,
+				allowBlank	:	false
+		    });
+
+	var form = new Ext.form.Panel( {
+		layout			:	'anchor',
+		//frame			:	true,
+		defaultType		:	'textfield',
+		bodyStyle		:	'padding: 16px',
+		labelWidth		:	126,
+		items			:	[
+		    {
+				fieldLabel	:	'First Field',
+				
+		    },
+		   rating, 
+		    {
+				fieldLabel	:	'Second Field',
+		    }
+		]
+	   
+	});
+	var window = new Ext.window.Window({
+			title	:	'A new Rating Field',
+			layout	:	'fit',
+			items	:	[form]
+		}).show();
+		
+});    
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
